@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CameraBody.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, -2.79447e-14, 2.34484e-14, 2.34484e-14, 0.984808, 0.173648, -2.79447e-14, -0.173648, 0.984808, 0, 0.942214, 6.55473 )
+script = ExtResource( 1 )
+
+[node name="CameraPivot" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="CameraPivot"]
+transform = Transform( 1, -2.37131e-14, 2.39265e-14, 2.36134e-14, 0.999991, 0.00415388, -2.40248e-14, -0.00415388, 0.999991, 1.36422e-12, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
